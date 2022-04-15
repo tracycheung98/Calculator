@@ -8,24 +8,38 @@
     </head>
     <body>
         <header>
-            <h3>Lab 7: JavaScript Arithmetic Operator</h3>
+            <h3>Calculator</h3>
         </header>
         <section>
             <form name="mycalculator" action='' method='GET'>
                 <fieldset>
                     <legend>My calculator</legend>
-                    <textarea name="output" rows="3" cols="20"></textarea>
+                    <div class="output">
+                        <textarea name="output" rows="3" cols="20"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Input</legend>
+                    <legend>Input (integer only)</legend>
                     Operands: &nbsp;
                     <input type="text" name="input_a" id="input_a" size="3" maxlength="3">&nbsp;
                     <input type="text" name="input_b" id="input_b" size="3" maxlength="3">
                     <br>
                     Operator: &nbsp;
                     <input type="button" name="add" value="+" onclick="addValue()">
+                    <input type="button" name="sub" value="-" onclick="subValue()">
                     <input type="button" name="mul" value="&times;" onclick="mulValue()">
                     <input type="button" name="div" value=":" onclick="divValue()">
+                    <input type="reset" value="clear">
+                </fieldset>
+                <fieldset>
+                    <legend>Input (radians)</legend>
+                    <select name="tri" id="tri">
+                        <option value="sin">sin</option>
+                        <option value="cos">cos</option>
+                        <option value="tan">tan</option>
+                    </select>         
+                    <input type="text" name="input_tri" id="input_tri" size="3" maxlength="3">&nbsp;
+                    <input type="button" value="submit" onclick="triValue()">
                     <input type="reset" value="clear">
                 </fieldset>
             </form>
